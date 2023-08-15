@@ -1,6 +1,7 @@
 'use client'
 
 import Header from './components/Header';
+import Search from './components/Search';
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
@@ -70,6 +71,10 @@ export default function Home() {
 
       <Header />
       <div className="container bg-red-50 mx-auto space-y-2">
+
+
+        <Search />
+
         <h1 className="text-2xl font-bold">Add a Product</h1>
         <h1>Name</h1>
         <input className="w-full border border-black rounded-md p-2" type="text" value={addProduct.name} onChange={handleChange} name="name" />
